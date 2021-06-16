@@ -18,7 +18,22 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+      - name: Check out the repo to copy the file from
+        uses: actions/checkout@master
+        with:
+          repository: orgname/reponame
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world! Hope this ran because of the other repo
+      - name: update schema files
+        run: |
+          ls
+          git config user.name 'ryandillinfelton' 
+          git config user.email 'rfelton@redhat.com'
+          echo beans > new_file.txt
+          git add -A
+          git commit -m "update"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
