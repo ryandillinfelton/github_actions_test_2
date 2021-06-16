@@ -19,9 +19,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Check out the repo to copy the file from
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
         with:
-          repository: orgname/reponame
+          repository: ryandillinfelton/github_actions_test_1
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       # Runs a single command using the runners shell
       - name: Run a one-line script
