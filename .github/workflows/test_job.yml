@@ -23,8 +23,7 @@ jobs:
         run: |
           pwd
           ls
-          ls ..
-          ls ../..
+          ls github_actions_test_2
       - name: Check out the repo 1 to copy the file from
         uses: actions/checkout@v2
         with:
