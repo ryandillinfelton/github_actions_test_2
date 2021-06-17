@@ -19,6 +19,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Check out repo 2
         uses: actions/checkout@v2
+      - name: What's here?
         run: |
           pwd
           ls
@@ -27,6 +28,7 @@ jobs:
         with:
           repository: ryandillinfelton/github_actions_test_1
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      - name: hmm
         run: |
           pwd
           ls
