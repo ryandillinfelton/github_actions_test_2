@@ -23,7 +23,6 @@ jobs:
         run: |
           pwd
           ls
-          ls github_actions_test_2
       - name: Check out the repo 1 to copy the file from
         uses: actions/checkout@v2
         with:
@@ -34,8 +33,6 @@ jobs:
         run: |
           pwd
           ls
-          ls ..
-          ls ../..
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world! Hope this ran because of the other repo
