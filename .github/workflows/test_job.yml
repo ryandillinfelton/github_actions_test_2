@@ -29,6 +29,7 @@ jobs:
         with:
           repository: ryandillinfelton/github_actions_test_1
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          path: ./github_actions_test_1
       - name: hmm
         run: |
           pwd
